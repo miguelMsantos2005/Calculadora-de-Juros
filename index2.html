@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entendendo Juros Simples e Compostos</title>
+    <style>
+      :root {
+        --bg-color: #f9f9f9;
+        --card-bg: #ffffff;
+        --text-color: #333333;
+        --accent-color: #0066cc;
+        --border-color: #e0e0e0;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        line-height: 1.6;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 40px 20px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #111;
+      }
+
+      p.subtitle {
+        font-size: 1.1rem;
+        color: #666;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+      }
+
+      @media (min-width: 768px) {
+        .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .card {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 0;
+        color: var(--accent-color);
+        border-bottom: 2px solid var(--bg-color);
+        padding-bottom: 10px;
+      }
+
+      .formula {
+        background-color: var(--bg-color);
+        padding: 15px;
+        border-radius: 6px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 20px 0;
+        border-left: 4px solid var(--accent-color);
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      .exemplo {
+        background-color: #f0f7ff;
+        border-radius: 6px;
+        padding: 15px;
+        font-size: 0.95rem;
+        border: 1px solid #d0e3ff;
+      }
+
+      footer {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #888;
+        margin-top: 60px;
+        border-top: 1px solid var(--border-color);
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Juros Simples vs. Juros Compostos</h1>
+        <p class="subtitle">
+          Guia rápido e direto para entender a matemática do seu dinheiro.
+        </p>
+      </header>
+
+      <main class="grid">
+        <section class="card">
+          <h2>Juros Simples</h2>
+          <p>
+            No modelo simples, o percentual de juros é calculado
+            <strong>apenas sobre o valor inicial</strong> (o capital) em todo o
+            período. O valor do juro é fixo a cada mês ou ano.
+          </p>
+
+          <div class="formula">J = C · i · t</div>
+
+          <h3>Onde:</h3>
+          <ul>
+            <li><strong>J:</strong> Valor dos juros gerados</li>
+            <li><strong>C:</strong> Capital inicial (dinheiro original)</li>
+            <li>
+              <strong>i:</strong> Taxa de juros (em decimal, ex: 10% = 0,10)
+            </li>
+            <li><strong>t:</strong> Tempo de aplicação</li>
+          </ul>
+
+          <div class="exemplo">
+            <strong>Exemplo prático:</strong><br />
+            Se você investir R$ 1.000,00 a uma taxa de 10% ao ano por 3 anos:<br />
+            • Ano 1: +R$ 100<br />
+            • Ano 2: +R$ 100<br />
+            • Ano 3: +R$ 100<br />
+            <strong>Total acumulado (Montante):</strong> R$ 1.300,00
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Juros Compostos</h2>
+          <p>
+            Aqui opera o famoso "juros sobre juros". O percentual é calculado
+            sobre o <strong>valor do período anterior já corrigido</strong>. O
+            rendimento cresce de forma exponencial.
+          </p>
+
+          <div class="formula">M = C · (1 + i)<sup>t</sup></div>
+
+          <h3>Onde:</h3>
+          <ul>
+            <li><strong>M:</strong> Montante final (Capital + Juros)</li>
+            <li><strong>C:</strong> Capital inicial</li>
+            <li><strong>i:</strong> Taxa de juros (em decimal)</li>
+            <li><strong>t:</strong> Tempo de aplicação</li>
+          </ul>
+
+          <div class="exemplo">
+            <strong>Exemplo prático:</strong><br />
+            Se você investir os mesmos R$ 1.000,00 a 10% ao ano por 3 anos:<br />
+            • Ano 1: 10% de R$ 1.000 = R$ 1.100,00<br />
+            • Ano 2: 10% de R$ 1.100 = R$ 1.210,00<br />
+            • Ano 3: 10% de R$ 1.210 = R$ 1.331,00<br />
+            <strong>Total acumulado (Montante):</strong> R$ 1.331,00
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          Dica visual: No longo prazo, os juros simples formam uma linha reta no
+          gráfico, enquanto os juros compostos formam uma curva que cresce cada
+          vez mais rápido.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

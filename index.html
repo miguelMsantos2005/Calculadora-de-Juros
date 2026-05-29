@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculadora de Juros Simples e Compostos</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculadora de Juros</h1>
+
+      <form action="">
+        <div class="input-group">
+          <label for="capital">Capital (R$):</label>
+          <input
+            type="number"
+            placeholder="1999.99"
+            step="0.01"
+            name="capital"
+            id="capital"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="taxa">Taxa (%):</label>
+          <input
+            type="number"
+            placeholder="35.90"
+            step="0.01"
+            name="taxa"
+            id="taxa"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="tempo">Tempo (em meses):</label>
+          <input type="number" placeholder="24" name="tempo" id="tempo" />
+        </div>
+
+        <div class="input-group">
+          <label for="tiposDeTaxa">Tipo de Juros:</label>
+          <select name="tiposDeTaxa" id="tiposDeTaxa">
+            <option value="1">Simples</option>
+            <option value="2">Composto</option>
+          </select>
+        </div>
+
+        <button onclick="calcular()">Enviar</button>
+      </form>
+
+      <h2 id="resultado"></h2> <br>
+
+      <a href="/index2.html" style="text-align: center;"><p>Como Calcular?</p></a>
+    </div>
+
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
